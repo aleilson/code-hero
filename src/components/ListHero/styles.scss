@@ -1,0 +1,117 @@
+.herolist {
+
+  @media (max-width: 1279px) {
+    margin: 40px;
+  }
+
+  @media(max-width: 767px) {
+    margin: 20px;
+  }
+
+  table {
+    width: 100%;
+
+    thead {
+      tr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 24px;
+        grid-gap: 30px;
+
+        @media (max-width: 767px) {
+          grid-gap: 10px;
+        }
+
+        @media (max-width: 425px) {
+          padding: 10px;
+        }
+
+        th {
+          color: #8E8E8E;
+          font-size: 14px;
+          line-height: 20px;
+          font-family: 'PT Sans', sans-serif;
+          text-align: left;
+
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background: #FFFFFF;
+        margin-bottom: 8px;
+        border: 1px solid #00000033;
+        border-radius: 4px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+        padding: 20px 24px;
+
+        &:hover {
+          border: 1px solid #555555;
+          cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+          grid-gap: 10px;
+        }
+
+        @media (max-width: 425px) {
+          padding: 10px;
+        }
+
+        td {
+          span {
+            color: #555555;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    &--avatar {
+      width: 48px;
+      height: 48px;
+      margin-right: 24px;
+
+      @media (max-width: 767px) {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+    }
+    
+    &--name {
+      font-family: 'PT Sans', sans-serif;
+      color: #555555;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+    }
+  }
+}
